@@ -1,12 +1,15 @@
-# Provisioning of Infrastructure with Terraform
+### DEMO
 
-This is a terraform deployment of a Docker image to an EC2 instance with a load balancer and autoscaling group. Using a bash template, Docker is installed on the EC2 instance at launch. A Docker image is pulled from Docker Hub and run on the server.
-
+https://osmanya.co
 
 ## AWS Infrastructure Diagram
 
 ![AWS Diagram](/images/aws-infrastructure-diagram.png)
 
-### URL
+# Provisioning of Infrastructure with Terraform
 
-http://osmanya.co
+This Terraform deployment is highly available and scalable AWS architecture. It uses an Auto Scaling Group to automatically add EC2 instances when CPU utilisation reaches 75%, ensuring consistent performance. An AWS Elastic Load Balancer efficiently distributes traffic also ensuring uptime. This setup is ideal for handling fluctuating traffic and maintaining robust application performance.
+
+## Secure Web Infrastructure with Dynadot, AWS Certificate Manager and Route 53
+
+The website is configured with a secure encrypted connection thanks to a SSL certificate issued by AWS Certificate Manager. I registered the domain on DynoDot which is managed using AWS Route 53. Route 53 routes traffic to the AWS load balancer, ensuring high availability and optimal traffic distribution for the website.
